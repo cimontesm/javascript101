@@ -22,6 +22,7 @@ const frameworks = [
  * 1. Itere el arreglo frameworks.
  *    Referencia: https://javascript.info/array#loops
  * 
+ 
  * 2. En cada iteración:
  *
  *    Tome una cadena del arreglo y divídala en partes usando el separador "|".
@@ -44,3 +45,13 @@ const frameworks = [
  *    para agregar una nueva fila con estos datos al cuerpo de la tabla HTML.
  */
 
+for (let framew of frameworks) {
+  let chain = framew.split("|");
+  let[name, date, numUsers, percentage] = chain;
+  var frameworkObj = new Object();
+  frameworkObj.frameworkName = name.trim();
+  frameworkObj.releaseDate = date.trim();
+  frameworkObj.usersName = numUsers.trim();
+  frameworkObj.popularityPercentage = percentage.trim();
+  addRow(frameworkObj, "data-frameworks"); 
+}
